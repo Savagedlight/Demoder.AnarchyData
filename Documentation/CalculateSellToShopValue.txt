@@ -1,0 +1,52 @@
+﻿The example in this file is a joint result of nkbphaz & Demoder. Code is from nkbphaz' project.
+
+        public static long GetItemDbValue(int lowId, int highId, int quality)
+        {
+            if (!(lowId > 0 && highId > 0 && quality > 0))
+                throw new ArgumentException("Item id and quality must be non-zero");
+
+            DBItem lowItem = Player.ResourceDatabase.GetItem(lowId);
+            DBItem highItem = Player.ResourceDatabase.GetItem(highId);
+
+            int lowQl = lowItem.Properties.ContainsKey(Stat.Level) ? lowItem.Properties[Stat.Level] : 0;
+            int lowValue = lowItem.Properties.ContainsKey(Stat.Value) ? lowItem.Properties[Stat.Value] : 0;
+            int highQl = highItem.Properties.ContainsKey(Stat.Level) ? highItem.Properties[Stat.Level] : 0;
+            int highValue = highItem.Properties.ContainsKey(Stat.Value) ? highItem.Properties[Stat.Value] : 0;
+
+            if (lowQl == highQl)
+            {
+                return lowValue;
+            }
+
+            if (highValue == 0)
+            {
+                return highValue;
+            }
+
+
+            double num1 = Math.Pow((quality - lowQl), 2);
+            double num2 = highValue - lowValue;
+            double num3 = Math.Pow(highQl - lowQl, 2);
+
+            return (long)Math.Round(lowValue + Math.Pow((quality - lowQl), 2) * (highValue - lowValue) / Math.Pow(highQl - lowQl, 2));
+        }
+
+        public static long GetItemSellPrice(int lowId, int highId, int quality, int computerLiteracy, int shopModifier)
+        {
+            // > 3k cl makes no difference
+            computerLiteracy = computerLiteracy > 3000 ? 3000 : computerLiteracy;
+
+            long dbValue = GetItemDbValue(lowId, highId, quality);
+            double compLitBonus = 1 + ((double)(computerLiteracy / 40) / 100);
+            double shopBuyModifier = (double)shopModifier / 100;
+
+            return (long)(dbValue * compLitBonus * shopBuyModifier);
+        }
+
+        public struct ShopModifiers
+        {
+            public const int OmniTraderShop = 8;
+            public const int ClanTraderShop = 7;
+            public const int OmniRegularShop = 5;
+            public const int ClanRegularShop = 4;
+        }

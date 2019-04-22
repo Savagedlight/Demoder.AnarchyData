@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B07518B-7C5E-4A23-9AF4-8740C471A6E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demoder.AnarchyData</RootNamespace>
+    <AssemblyName>Demoder.AnarchyData</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\BelongsToAttribute.cs" />
+    <Compile Include="Attributes\BitNumParameterAttribute.cs" />
+    <Compile Include="Attributes\IncludeEnumAttribute.cs" />
+    <Compile Include="Attributes\ItemIdParameterAttribute.cs" />
+    <Compile Include="Attributes\DurationParameterAttribute.cs" />
+    <Compile Include="Attributes\HideAttribute.cs" />
+    <Compile Include="Attributes\InterpolateAttribute.cs" />
+    <Compile Include="Attributes\MdbTextParameterAttribute.cs" />
+    <Compile Include="Attributes\NanoIdParameterAttribute.cs" />
+    <Compile Include="Attributes\ParameterAttribute.cs" />
+    <Compile Include="Attributes\DistanceParameterAttribute.cs" />
+    <Compile Include="Attributes\PercentParameterAttribute.cs" />
+    <Compile Include="Attributes\PlayfieldParameterAttribute.cs" />
+    <Compile Include="Attributes\SpellFormatAttribute.cs" />
+    <Compile Include="Attributes\StatValueAttribute.cs" />
+    <Compile Include="Attributes\PerkIdParameterAttribute.cs" />
+    <Compile Include="Attributes\SpellIdAttribute.cs" />
+    <Compile Include="Attributes\StatAttribute.cs" />
+    <Compile Include="Attributes\TextStatValueParameterAttribute.cs" />
+    <Compile Include="Base.cs" />
+    <Compile Include="enums.cs" />
+    <Compile Include="FuncomTexture\FcTx.cs" />
+    <Compile Include="Hash.cs" />
+    <Compile Include="Identity.cs" />
+    <Compile Include="InterpolationRegistry.cs" />
+    <Compile Include="MinimapMetadata.cs" />
+    <Compile Include="PlayfieldInfo.cs" />
+    <Compile Include="SpellParameterInfo.cs" />
+    <Compile Include="Spells\StealTargetSpell.cs" />
+    <Compile Include="Spells\DeleteQuestSpell.cs" />
+    <Compile Include="Spells\Unknown53243Spell.cs" />
+    <Compile Include="Spells\EndFightSpell.cs" />
+    <Compile Include="Spells\TrySneakSpell.cs" />
+    <Compile Include="Spells\SendMailSpell.cs" />
+    <Compile Include="Spells\CreditTransferSpell.cs" />
+    <Compile Include="Spells\RemoveCooldownSpell.cs" />
+    <Compile Include="Spells\FailQuestSpell.cs" />
+    <Compile Include="Spells\UpdateSpell.cs" />
+    <Compile Include="Spells\BreedChangeSpell.cs" />
+    <Compile Include="Spells\GenderChangeSpell.cs" />
+    <Compile Include="StatValueTypeMap.cs" />
+    <Compile Include="Template.cs" />
+    <Compile Include="NanoLine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Criterion.cs" />
+    <Compile Include="ShopHash.cs" />
+    <Compile Include="Spell.cs" />
+    <Compile Include="Spells\AddActionSpell.cs" />
+    <Compile Include="Spells\AddBattlestationQueueSpell.cs" />
+    <Compile Include="Spells\AddDefensiveProcSpell.cs" />
+    <Compile Include="Spells\AddOffensiveProcSpell.cs" />
+    <Compile Include="Spells\AddSkillSpell.cs" />
+    <Compile Include="Spells\AnimEffectSpell.cs" />
+    <Compile Include="Spells\AnimSpell.cs" />
+    <Compile Include="Spells\AreaCastNanoSpell.cs" />
+    <Compile Include="Spells\AreaHitSpell.cs" />
+    <Compile Include="Spells\AttractorEffectASpell.cs" />
+    <Compile Include="Spells\AttractorEffectBSpell.cs" />
+    <Compile Include="Spells\AttractorEffectCSpell.cs" />
+    <Compile Include="Spells\AttractorGfxEffectSpell.cs" />
+    <Compile Include="Spells\AttractorMeshSpell.cs" />
+    <Compile Include="Spells\BackMeshSpell.cs" />
+    <Compile Include="Spells\CanFlySpell.cs" />
+    <Compile Include="Spells\CastNano2Spell.cs" />
+    <Compile Include="Spells\CastNanoChanceSpell.cs" />
+    <Compile Include="Spells\CastNanoIfPossibleSpell.cs" />
+    <Compile Include="Spells\CastNanoOnAllPetsSpell.cs" />
+    <Compile Include="Spells\CastNanoSpell.cs" />
+    <Compile Include="Spells\ChangeActionRestrictionSpell.cs" />
+    <Compile Include="Spells\ChangeBodyMeshSpell.cs" />
+    <Compile Include="Spells\ChangeEffectSpell.cs" />
+    <Compile Include="Spells\ChangeVariableSpell.cs" />
+    <Compile Include="Spells\CharmNpcSpell.cs" />
+    <Compile Include="Spells\ClearFlagSpell.cs" />
+    <Compile Include="Spells\ComboNameGenSpell.cs" />
+    <Compile Include="Spells\ControlHateSpell.cs" />
+    <Compile Include="Spells\CreateApartmentSpell.cs" />
+    <Compile Include="Spells\CreateCityGuestKeySpell.cs" />
+    <Compile Include="Spells\DazeSpell.cs" />
+    <Compile Include="Spells\DelayedSpawnNpcSpell.cs" />
+    <Compile Include="Spells\DestroyAllHumansSpell.cs" />
+    <Compile Include="Spells\DestroyItemSpell.cs" />
+    <Compile Include="Spells\DisableDefenseShieldSpell.cs" />
+    <Compile Include="Spells\DrainHitSpell.cs" />
+    <Compile Include="Spells\EnterApartmentSpell.cs" />
+    <Compile Include="Spells\EquipMonsterWeaponSpell.cs" />
+    <Compile Include="Spells\FearSpell.cs" />
+    <Compile Include="Spells\GenerateNameSpell.cs" />
+    <Compile Include="Spells\GfxEffectSpell.cs" />
+    <Compile Include="Spells\GlobalTextSpell.cs" />
+    <Compile Include="Spells\GotoLastSavepointSpell.cs" />
+    <Compile Include="Spells\HeadMeshSpell.cs" />
+    <Compile Include="Spells\HeadTextSpell.cs" />
+    <Compile Include="Spells\HitSpell.cs" />
+    <Compile Include="Spells\InputBoxSpell.cs" />
+    <Compile Include="Spells\InstancedPlayerCitySpell.cs" />
+    <Compile Include="Spells\InstanceLockSpell.cs" />
+    <Compile Include="Spells\KnockbackSpell.cs" />
+    <Compile Include="Spells\LandControlCreateSpell.cs" />
+    <Compile Include="Spells\LockPerkSpell.cs" />
+    <Compile Include="Spells\LockSkillSpell.cs" />
+    <Compile Include="Spells\MezzSpell.cs" />
+    <Compile Include="Spells\MindControlSpell.cs" />
+    <Compile Include="Spells\ModifyPercentageSpell.cs" />
+    <Compile Include="Spells\ModifySpell.cs" />
+    <Compile Include="Spells\MonsterShapeSpell.cs" />
+    <Compile Include="Spells\NextHeadSpell.cs" />
+    <Compile Include="Spells\NpcMovementActionSpell.cs" />
+    <Compile Include="Spells\NpcPushScriptSpell.cs" />
+    <Compile Include="Spells\NpcSaySpell.cs" />
+    <Compile Include="Spells\NpcWipeHatelistSpell.cs" />
+    <Compile Include="Spells\OpenBankSpell.cs" />
+    <Compile Include="Spells\PacifySpell.cs" />
+    <Compile Include="Spells\PlayfieldNanoSpell.cs" />
+    <Compile Include="Spells\PolymorphSpell.cs" />
+    <Compile Include="Spells\PrevHeadSpell.cs" />
+    <Compile Include="Spells\RecallToAnchorSpell.cs" />
+    <Compile Include="Spells\ReduceNanoStrainDurationSpell.cs" />
+    <Compile Include="Spells\RefreshModelSpell.cs" />
+    <Compile Include="Spells\RegisterControlPointSpell.cs" />
+    <Compile Include="Spells\RemoveNanoEffectsSpell.cs" />
+    <Compile Include="Spells\RemoveNanoStrainSpell.cs" />
+    <Compile Include="Spells\ResetAllPerksSpell.cs" />
+    <Compile Include="Spells\ResistNanoStrainSpell.cs" />
+    <Compile Include="Spells\RestrictActionSpell.cs" />
+    <Compile Include="Spells\RunScriptSpell.cs" />
+    <Compile Include="Spells\SaveCharacterSpell.cs" />
+    <Compile Include="Spells\SaveHereSpell.cs" />
+    <Compile Include="Spells\ScalingModifySpell.cs" />
+    <Compile Include="Spells\SetAnchorSpell.cs" />
+    <Compile Include="Spells\SetFlagSpell.cs" />
+    <Compile Include="Spells\SetGovernmentTypeSpell.cs" />
+    <Compile Include="Spells\SetSpell.cs" />
+    <Compile Include="Spells\ShoulderMeshSpell.cs" />
+    <Compile Include="Spells\SkillSpell.cs" />
+    <Compile Include="Spells\SocialAnimationSpell.cs" />
+    <Compile Include="Spells\SolveQuestSpell.cs" />
+    <Compile Include="Spells\SpawnItemChanceSpell.cs" />
+    <Compile Include="Spells\SpawnItemSpell.cs" />
+    <Compile Include="Spells\SpawnMonsterRotSpell.cs" />
+    <Compile Include="Spells\SpawnMonsterSpell.cs" />
+    <Compile Include="Spells\SpawnQuestSpell.cs" />
+    <Compile Include="Spells\SpecialHitSpell.cs" />
+    <Compile Include="Spells\StaticTextSpell.cs" />
+    <Compile Include="Spells\StunSpell.cs" />
+    <Compile Include="Spells\SummonPetSpell.cs" />
+    <Compile Include="Spells\SummonPetsSpell.cs" />
+    <Compile Include="Spells\SummonPlayerSpell.cs" />
+    <Compile Include="Spells\SummonTeamSpell.cs" />
+    <Compile Include="Spells\SystemTextSpell.cs" />
+    <Compile Include="Spells\Unknown53142Spell.cs" />
+    <Compile Include="Spells\ModifyPercentage2Spell.cs" />
+    <Compile Include="Spells\TalkSpell.cs" />
+    <Compile Include="Spells\TauntNpcSpell.cs" />
+    <Compile Include="Spells\TeamCastNanoSpell.cs" />
+    <Compile Include="Spells\TeleportProxyASpell.cs" />
+    <Compile Include="Spells\TeleportProxyBSpell.cs" />
+    <Compile Include="Spells\TeleportSpell.cs" />
+    <Compile Include="Spells\TextSpell.cs" />
+    <Compile Include="Spells\TextureSpell.cs" />
+    <Compile Include="Spells\TimedEffectSpell.cs" />
+    <Compile Include="Spells\UploadNanoSpell.cs" />
+    <Compile Include="StatValue.cs" />
+    <Compile Include="TemplateActionData.cs" />
+    <Compile Include="TemplateData\ActionData.cs" />
+    <Compile Include="TemplateData\AnimSoundData.cs" />
+    <Compile Include="TemplateData\AtkDefData.cs" />
+    <Compile Include="TemplateData\StatData.cs" />
+    <Compile Include="TemplateData\TemplateDataBase.cs" />
+    <Compile Include="TemplateData\ShopHashData.cs" />
+    <Compile Include="TemplateData\SpellData.cs" />
+    <Compile Include="TemplateData\Unknown1Data.cs" />
+    <Compile Include="TemplateMetaData.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\demoder.common\Demoder.Common.csproj">
+      <Project>{AC7BB3A1-A0E3-4931-9661-2BA4DB418B6F}</Project>
+      <Name>Demoder.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\CalculateSellToShopValue.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
