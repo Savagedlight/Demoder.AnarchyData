@@ -24,7 +24,6 @@ using System.Linq;
 using System.Text;
 using Demoder.Common.Attributes;
 using Demoder.AnarchyData.Attributes;
-using Demoder.AnarchyData.Attributes;
 
 namespace Demoder.AnarchyData.Spells
 {

@@ -37,7 +37,7 @@ namespace Demoder.AnarchyData.Spells
    public class EndFightSpell : Spell
    {
       [StreamData(0)]
-      public Target Target  {get; set; }
+      public Target Target  { get; set; }
 
       [StreamData(1)]
       public EndFightModifier Modifier { get; set; }

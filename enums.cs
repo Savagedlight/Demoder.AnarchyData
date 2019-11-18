@@ -1949,6 +1949,9 @@ namespace Demoder.AnarchyData
         /// See item 296263 (Breed Change: Solitus Female)
         /// </summary>
         HasNotAnythingWorn = 125,
+
+        UnknownOperator129 = 129,
+
         AlliesInCombat = 135,
         AlliesNotInCombat = 136,
         /// <summary>
@@ -2189,6 +2192,8 @@ namespace Demoder.AnarchyData
         OnCaster = 100,
         OnFightingTarget = 110,
         #endregion
+
+        UnknownOperator129 = 129,
     }
 
     public enum UnusedOperator

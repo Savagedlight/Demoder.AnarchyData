@@ -87,13 +87,20 @@ namespace Demoder.AnarchyData
         public AnimSoundData Sounds { get { return (AnimSoundData)this.DataBlocks.FirstOrDefault(b => b is AnimSoundData && b.Identity.Type == 20); } }
         /// <summary>
         /// Usually refered to as 'Attributes' in other parsers.
+        /// Retrieves 
         /// </summary>
+        /// <value>
+        /// An array with <see cref="StatValue"/> of 0 or greater length, never null.
+        /// </value>
         public StatValue[] Stats
         {
             get
             {
                 var block = this.GetDataBlock<StatData>();
-                if (block == null) { return null; }
+                if (block == null)
+                {
+                    return new StatValue[0];
+                }
                 return block.Items;
             }
         }

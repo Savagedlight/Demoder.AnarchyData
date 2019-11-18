@@ -44,5 +44,11 @@ namespace Demoder.AnarchyData
 
         public int Type { get; set; }
         public TemplateGuessedType GuessedType { get; set; }
+
+        public TemplateMetaData()
+        {
+            this.Name = "";
+            this.Description = "";
+        }
     }
 }

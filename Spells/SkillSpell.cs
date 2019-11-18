@@ -24,7 +24,6 @@ using System.Linq;
 using System.Text;
 using Demoder.Common.Attributes;
 using Demoder.AnarchyData.Attributes;
-using Demoder.AnarchyData.Attributes;
 
 namespace Demoder.AnarchyData.Spells
 {
@@ -43,6 +42,7 @@ namespace Demoder.AnarchyData.Spells
 
         [StreamData(1)]
         [Interpolate]
+        [BelongsTo("Stat")]
         public int Amount { get; set; }
 
         [StreamData(2)]
