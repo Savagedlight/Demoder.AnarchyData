@@ -55,7 +55,10 @@ namespace Demoder.AnarchyData
         public Spell[] GetSpells(uint action)
         {
             var block = (SpellData)this.DataBlocks.FirstOrDefault(b => b is SpellData && b.Identity.Instance == action);
-            if (block == null) { return null; }
+            if (block == null)
+            {
+                return new Spell[0];
+            }
             return block.Items;
         }
         #endregion
@@ -66,7 +69,10 @@ namespace Demoder.AnarchyData
             get
             {
                 var block = this.GetDataBlock<AtkDefData>();
-                if (block == null) { return null; }
+                if (block == null) 
+                { 
+                    return new StatValue[0]; 
+                }
                 return block.Attack.ToArray();
             }
         }
@@ -76,7 +82,10 @@ namespace Demoder.AnarchyData
             get
             {
                 var block = this.GetDataBlock<AtkDefData>();
-                if (block == null) { return null; }
+                if (block == null) 
+                { 
+                    return new StatValue[0]; 
+                }
                 return block.Defense.ToArray();
             }
         }
@@ -87,7 +96,6 @@ namespace Demoder.AnarchyData
         public AnimSoundData Sounds { get { return (AnimSoundData)this.DataBlocks.FirstOrDefault(b => b is AnimSoundData && b.Identity.Type == 20); } }
         /// <summary>
         /// Usually refered to as 'Attributes' in other parsers.
-        /// Retrieves 
         /// </summary>
         /// <value>
         /// An array with <see cref="StatValue"/> of 0 or greater length, never null.
